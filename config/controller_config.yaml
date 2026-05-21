@@ -1,0 +1,70 @@
+controller_manager:
+  ros__parameters:
+    use_sim_time: true
+    update_rate: 1000
+
+    joint_state_broadcaster:
+      type: "joint_state_broadcaster/JointStateBroadcaster"
+    
+    joint_velocity_controller:
+      type: "velocity_controllers/JointGroupVelocityController"
+
+    joint_position_controller:
+      type: "position_controllers/JointGroupPositionController"
+    
+    forward_velocity_controller:
+      type: forward_command_controller/ForwardCommandController
+
+    forward_position_controller:
+      type: forward_command_controller/ForwardCommandController
+
+joint_velocity_controller:
+  ros__parameters:
+    joints:
+      - base_to_support
+      - support_to_rot_y
+      - rot_y_to_rot_x
+      - rot_combined_to_seat
+      - seat_to_backrest
+    command_interfaces:
+      - velocity
+    state_interfaces:
+      - position
+      - velocity
+
+    
+
+joint_position_controller:
+  ros__parameters:
+    joints:
+      - base_to_support
+      - support_to_rot_y
+      - rot_y_to_rot_x
+      - rot_combined_to_seat
+      - seat_to_backrest
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+
+forward_position_controller:
+  ros__parameters:
+    joints:
+      - base_to_support
+      - support_to_rot_y
+      - rot_y_to_rot_x
+      - rot_combined_to_seat
+      - seat_to_backrest
+    interface_name: position
+
+forward_velocity_controller:
+  ros__parameters:
+    joints:
+    - base_to_support
+    - support_to_rot_y
+    - rot_y_to_rot_x
+    - rot_combined_to_seat
+    - seat_to_backrest
+    interface_name: velocity

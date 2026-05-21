@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<robot name="opt_table" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find opt_description)/urdf/opt_table401_description.xacro" />
+  
+<!-- Instantiate the opt surgical table -->
+  <xacro:opt_table />
+
+</robot>
