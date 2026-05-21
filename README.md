@@ -50,4 +50,4 @@ ros2 launch opt_description show_launch.py
 
 ## Acknowledgments
 
-This thesis project was developed in collaboration with the **Interdepartmental Robotics Labs (IDRA)** at the University of Trento. We thank IDRA for providing the resources, expertise, and support that made this research possible.
+This thesis project was developed in collaboration with the **Interdepartmental Robotics Labs (IDRA)** at the University of Trento ([IDRA GitHub](https://github.com/idra-lab)). I was a research student during my thesis internship. We thank IDRA for providing the resources, expertise, and support that made this research possible.
